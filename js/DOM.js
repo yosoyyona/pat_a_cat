@@ -1,4 +1,24 @@
-document.getElementById("start").addEventListener('click', (event) => {
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* document.getElementById("start").addEventListener('click', (event) => {
 
     // Create the Background
     background = new Component(0, 0, myGameArea.canvas.width, myGameArea.canvas.height, "grey")
@@ -12,4 +32,4 @@ document.getElementById("start").addEventListener('click', (event) => {
     document.getElementById("start-page").style.display = "none"
     //document.getElementById("restart").disabled = false
     //document.getElementById("pause").disabled = false
-})
+}) */

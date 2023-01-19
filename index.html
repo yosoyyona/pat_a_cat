@@ -14,24 +14,38 @@
             PAT A CAT
         </h1>
 
-        <button id="start"> Start! </button>
+        <button id="start-button"> Start! </button>
     </div>
+
+    <div id="name-page">
+        <p>What's your name?🐈</p>
+        <input type="text" placeholder="User Name" />
+        <button id="name-button">Enter</button>
+    </div>
+
 
     <div id="game-page">
 
-        <div class="top">
+        <div class="info-board">
+            <div id="name-board">
+                <p> <span id="name"> PAT </span></p>
+            </div>
             <div id="score-board">
-                <p> pts</p>
+                <p>SCORE: <span id="score"> 0 </span></p>
             </div>
             <div id="stage-number">
-                <p>STAGE </p>
+                <p>STAGE: <span id="stage"> 1 </span></p>
             </div>
             <div id="time-board">
-                <p> s</p>
+                <p>TIME: <span id="time"> 60</span></p>
             </div>
         </div>
 
-        <button id="pause"> Pause </button>
+        <div id="game-board">
+            <canvas id="canvas" width="500" height="400"></canvas>
+        </div>
+
+        <button id="pause-button"> Pause </button>
 
     </div>
 
@@ -40,7 +54,7 @@
             Game Paused
         </h1>
 
-        <button id="restart"> Restart </button>
+        <button id="restart-button"> Restart </button>
     </div>
 
     <div id="result-page">
@@ -48,7 +62,7 @@
             Results!
         </h1>
 
-        <button id="play-again"> Play Again </button>
+        <button id="again-button"> Play Again </button>
     </div>
 
     <script src="/js/main.js"></script>
