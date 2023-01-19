@@ -2,8 +2,6 @@ body{
     display: flex;
     position: relative;
     flex-direction: column;
-    width: 500px;
-    height: 500px;
 }
 
 #start-page,
@@ -13,17 +11,19 @@ body{
 #result-page{
     position: absolute;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    top: 10%;
     text-align: center;
+    width: 500px;
+    height: 500px;
 }
 
 #start-page,
+#name-page,
 #result-page{
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #name-page,
@@ -33,17 +33,28 @@ body{
     display: none;
 }
 
-#info-board{
+/* top */
+#info-board{   
     position: absolute;
-    width: 500px;
-    height: 100px;
-    display: inline-flex;
-    flex-direction: row;
+    display: flex;
+    text-align: center;
+    margin: auto;
 }
 
-#canvas{
-    padding: 0% 10%;
+
+#name-board,
+#score-board,
+#stage-board,
+#time-board{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    
 }
+
+
+
 
 #start-button,
 #again-button{
@@ -54,7 +65,9 @@ body{
 #pause-button,
 #restar-button{
     position: absolute;
-    bottom: 100px;
+    justify-content: center;
+    bottom: 30px;
     transform: translateX(-50%);
     display: none;
+    margin: auto;
 }

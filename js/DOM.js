@@ -1,35 +1,20 @@
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+// pages
+const startP = document.getElementById('start-page')
+const nameP = document.getElementById('name-page')
+const gameP = document.getElementById('game-page')
+const pausedP = document.getElementById('paused-page')
+const resultP = document.getElementById('result-page')
 
+// buttons
+const startB = document.getElementById('start-button')
+const nameB = document.getElementById('name-button')
+const pauseB = document.getElementById('pause-button')
+const restartB = document.getElementById('restart-button')
+const againB = document.getElementById('again-button')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* document.getElementById("start").addEventListener('click', (event) => {
-
-    // Create the Background
-    background = new Component(0, 0, myGameArea.canvas.width, myGameArea.canvas.height, "grey")
-    //background.img = new Image();
-    //background.img.src = "../img/Background.png"
-
-
-
-    updateTimer = setInterval(myGameArea.update, 1000 / 60)
-
-    document.getElementById("start-page").style.display = "none"
-    //document.getElementById("restart").disabled = false
-    //document.getElementById("pause").disabled = false
-}) */
+// boards - name, score, stage, time
+const infoBoard = document.getElementById('#info-board')
+const nameBoard = document.getElementById('name-board')
+const scoreBoard = document.getElementById('score-board')
+const stageBoard = document.getElementById('stage-board')
+const timeBoard = document.getElementById('time-board')
