@@ -39,13 +39,13 @@ function startGame() {
 
 
 // click events
-startB.onclick = () => {
+document.getElementById('start-button').onclick = () => {
     document.getElementById('start-page').style.display = 'none';
     nameP.style.display = 'flex';
     
 }
 
-nameB.onclick = () => {
+document.getElementById('name-button').onclick = () => {
     
     // if(userName) 
     createUser();
