@@ -1,22 +1,68 @@
 const gameArea = {
+    isGamePaused: false,
+    isGameFinished: false,
 
 
 
+        
+
+    start: function() {
+        document.getElementById('name-button').on('click', () =>{
+            this.startStage()
+        })
+    },
+    
+    
+    startStage: function() {
+        this.timer()
+
+        
+
+
+    },
+    
+    timer: function() {
+        let gameTime = 60;
+
+        setInterval(myTimer, 1000);
+
+        function myTimer() {
+            if(gameTime > 0) gameTime--;
+        }
+
+    },
+
+    randomHoles: function(holes) {
+        
+        const number = Math.floor(Math.random() * holes.length)
+    
+        return holes[number]
+        
+    },
+
+    catsOut: function() {
+        let holesArray = ['left', 'centerTop', 'centerBottom', 'right']
+        this.randomHoles(holesArray)
+
+
+    },
+
+    /* update: function() {
+
+        if (myGameArea.isGamePaused) return
+        
+        
+    } */
+    // updateTimer = setInterval(gameArea.update, 1000 / 60)
     
 }
+
+
+gameArea.start
+
 
 // stage 1(time 60s) > paused > restart > 0 > stage 2 > ... > stage 3 > ... > 0 > Result 
 
-
-
-// 4 holes
-let holes = ['left', 'centerTop', 'centerBottom', 'right']
-
-function randomHole(holes) {
-    const number = Math.floor(Math.random() * holes.length)
-    
-    return holes[number]
-}
 
 
 // cats, randomtime
@@ -29,12 +75,6 @@ function catsOut() {
 function dogsOut() {
     
 }
-
-
-
-
-
-
 
 
 
