@@ -40,6 +40,10 @@ const gameArea = {
     patCat: function(position) {
 
         let targetHole = document.getElementById(position)
+        let score = document.getElementById('score')
+        let totalScore = 0;
+        let counterPlus = 0;
+        let counterMinus = 0;
 
         // here there's a cat
         if (targetHole.classList.contains("filled-hole"))
@@ -48,26 +52,29 @@ const gameArea = {
             // add points
             targetHole.classList.remove("filled-hole")
             targetHole.classList.add("empty-hole")
-
+            
+            counterPlus ++;
         }
         // here the hole is empty
         else
         {
             // lose points
-            
+            counterMinus ++;
 
         }
-
+        totalScore = counterPlus - counterMinus;
+        score.innerText = totalScore;
     },
 
     timer: function() {
-        let gameTime = 60;
+        let time = 30;
 
-        setInterval(myTimer, 1000);
+        let gameTimer = setInterval(function(){
+            if(time <= 0) clearInterval(gameTimer)
+            document.getElementById('time').innerText = time
+            time -= 1;
 
-        function myTimer() {
-            if(gameTime > 0) gameTime--;
-        }
+        }, 1000)
 
         // pause
     },

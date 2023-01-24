@@ -23,6 +23,8 @@ function startGame() {
     setInterval(() => {
         gameArea.popCat()
     }, 3000)
+
+    gameArea.timer()
     
 }
 
@@ -30,6 +32,8 @@ let pauseGame = () => {
     gameArea.isGamePaused = true
     gameP.style.display = "none"
     pauseP.style.display = "flex"
+
+    gameArea.timer.pause()
 }
 
 let restartGame = () => {

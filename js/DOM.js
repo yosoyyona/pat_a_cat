@@ -19,6 +19,3 @@ const scoreBoard = document.getElementById('score-board')
 const stageBoard = document.getElementById('stage-board')
 const timeBoard = document.getElementById('time-board')
 
-// holes
-const emptyHoles = document.getElementsByClassName('empty-hole')
-let emptyHolesArray = [...emptyHoles]
