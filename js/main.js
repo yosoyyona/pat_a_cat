@@ -31,14 +31,14 @@ function startGame() {
 let pauseGame = () => {
     gameArea.isGamePaused = true
     gameP.style.display = "none"
-    pauseP.style.display = "flex"
+    pausedP.style.display = "flex"
 
     gameArea.timer.pause()
 }
 
 let restartGame = () => {
     gameArea.isGamePaused = false
-    pauseP.style.display = "none"
+    pausedP.style.display = "none"
     gameP.style.display = "flex"
 }
 
