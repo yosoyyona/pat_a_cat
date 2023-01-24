@@ -1,14 +1,13 @@
-
 let userName = '';
-
-
 
 function createUser() {
 
-    userName = document.querySelector('#name input[type="text"]') //.value
-    
-    console.log(userName)
+    userName = document.querySelector('#name').value 
+    newUser = document.getElementById('user-name')
+    newUser.innerText = userName
 
+    console.log(userName)
+    return userName
 }
 
 
@@ -43,11 +42,13 @@ document.getElementById('start-button').onclick = () => {
 
 document.getElementById('name-button').onclick = () => {
     
-    // if(userName) 
     createUser();
-    
-    gameP.style.display = 'flex';
-    startGame();
+
+    if(!userName == '' && typeof userName === 'string') 
+    {
+        gameP.style.display = 'flex';
+        startGame();
+    }
 }
 
 document.getElementById("pause-button").addEventListener('click', (event) => {
