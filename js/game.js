@@ -9,6 +9,15 @@ const gameArea = {
         { isCatOut: false, dom: document.getElementById("bottom") }
     ],
 
+    start: function () {
+
+        // change everything into black
+        this.cats.forEach(cat => {
+            cat.dom.classList.add("empty-hole")
+        })
+
+    },
+
     popCat: function () {
 
         // get all the black holes

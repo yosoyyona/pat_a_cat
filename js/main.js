@@ -28,21 +28,21 @@ function startGame() {
 
 let pauseGame = () => {
     gameArea.isGamePaused = true
-    document.getElementById('game-page').style.display = "none"
-    document.getElementById('paused-page').style.display = "flex"
+    gameP.style.display = "none"
+    pauseP.style.display = "flex"
 }
 
 let restartGame = () => {
     gameArea.isGamePaused = false
-    document.getElementById('paused-page').style.display = "none"
-    document.getElementById('game-page').style.display = "flex"
+    pauseP.style.display = "none"
+    gameP.style.display = "flex"
 }
 
 
 
 // click events
 document.getElementById('start-button').onclick = () => {
-    document.getElementById('start-page').style.display = 'none';
+    startP.style.display = 'none';
     nameP.style.display = 'flex';
 }
 
