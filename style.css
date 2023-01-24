@@ -76,11 +76,13 @@ h1{
 }
 
 .empty-hole{
+    display: inline-block;
     height: 70px;
     width: 70px;
     /* position: absolute; */
     border: solid 2px black;
     margin: 1px 40px;
+    background-color: aliceblue;
 }
 
 

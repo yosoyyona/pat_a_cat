@@ -69,7 +69,7 @@ document.getElementById("restart-button").addEventListener('click', (event) => {
 // keyboard events
 document.addEventListener('keydown', ({ key }) => {
 
-    if (gameArea.isGamePaused) return
+    //if (gameArea.isGamePaused) return
 
     switch (key) {
         case "Up": case "ArrowUp":

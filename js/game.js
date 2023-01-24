@@ -33,22 +33,28 @@ const gameArea = {
         // pause
     },
 
-    randomHoles: function(holes) {
+    randomColors: function() {
         
-        const number = Math.floor(Math.random() * holes.length)
-    
-        return holes[number]
+        return '#'+Math.floor(Math.random()*16777215).toString(16);
         
     },
 
-    catsOut: function() {
-        /* let holesArray = ['left', 'centerTop', 'centerBottom', 'right']
-        this.randomHoles(holesArray) */
-
+    colorHoles: function() {
         
+        const emptyHoles = document.getElementsByClassName('empty-hole');
 
+        for (i = 0; i < emptyHoles.length; i++) 
+        {
+            emptyHoles[i].style.backgroundColor = randomColors();
+        }
 
-    },
+        // setInterval(colorHoles, 1000)
+
+    }
+
+    // catsOut: function() {},
+
+    // dogsOut
 
     /* update: function() {
 
@@ -62,27 +68,12 @@ const gameArea = {
 
 
 gameArea.start
-
+gameArea.colorHoles
 
 // stage 1(time 60s) > paused > restart > 0 > stage 2 > ... > stage 3 > ... > 0 > Result 
 
 
 
-// cats, randomtime
-function catsOut() {
-
-    /* ctx.strokeRect(40, 50, 50, 50) //left
-    ctx.strokeRect(125, 85, 50, 50) //centerTop
-    ctx.strokeRect(125, 15, 50, 50) //centerBottom
-    ctx.strokeRect(210, 50, 50, 50) //right */
-
-}
-
-
-// dogs - stage 2, stage 3
-function dogsOut() {
-    
-}
 
 
 
