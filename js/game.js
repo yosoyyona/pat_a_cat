@@ -1,22 +1,11 @@
 const gameArea = {
     isGamePaused: false,
     isGameFinished: false,
-
-
-
-        
-
-    start: function() {
-        document.getElementById('name-button').on('click', () =>{
-            this.startStage()
-        })
-    },
-    
     
     startStage: function() {
-        this.timer()
+        // this.timer()
 
-        
+        this.colorHoles()
 
 
     },
@@ -33,24 +22,28 @@ const gameArea = {
         // pause
     },
 
-    randomColors: function() {
+    randomHole: function() {
+        const number = Math.floor(Math.random() * 4)
+        return number
+    },
+
+/*     randomColors: function() {
         
         return '#'+Math.floor(Math.random()*16777215).toString(16);
         
-    },
+    }, */
 
     colorHoles: function() {
         
         const emptyHoles = document.getElementsByClassName('empty-hole');
 
-        for (i = 0; i < emptyHoles.length; i++) 
-        {
-            emptyHoles[i].style.backgroundColor = randomColors();
-        }
+        emptyHoles[this.randomHole()].style.backgroundColor = 'black';
 
         // setInterval(colorHoles, 1000)
 
     }
+
+    
 
     // catsOut: function() {},
 
@@ -67,8 +60,14 @@ const gameArea = {
 }
 
 
-gameArea.start
-gameArea.colorHoles
+document.getElementById('name-button').addEventListener('click', (event) => {
+    gameArea.startStage()
+})
+
+
+
+//gameArea.start()
+
 
 // stage 1(time 60s) > paused > restart > 0 > stage 2 > ... > stage 3 > ... > 0 > Result 
 
