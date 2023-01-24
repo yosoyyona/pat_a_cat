@@ -2,14 +2,55 @@ const gameArea = {
     isGamePaused: false,
     isGameFinished: false,
     
-    startStage: function() {
-        // this.timer()
+    cats: [
+        { isCatOut: false, dom: document.getElementById("top") },
+        { isCatOut: false, dom: document.getElementById("left") },
+        { isCatOut: false, dom: document.getElementById("right") },
+        { isCatOut: false, dom: document.getElementById("bottom") }
+    ],
 
-        this.colorHoles()
+    popCat: function () {
 
+        // get all the black holes
+        let blackHoles = document.getElementsByClassName("empty-hole")
+
+        // get all the black holes that there are (because there might only be 1 or two available if all the cats get out)
+        // and get a random of them
+
+        if (blackHoles.length > 0) {
+
+            const number = Math.floor(Math.random() * blackHoles.length)
+            
+            blackHoles[number].classList.add("filled-hole")
+            blackHoles[number].classList.remove("empty-hole")
+        
+        }
 
     },
-    
+
+    patCat: function(position) {
+
+        let targetHole = document.getElementById(position)
+
+        // here there's a cat
+        if (targetHole.classList.contains("filled-hole"))
+        {
+
+            // add points
+            targetHole.classList.remove("filled-hole")
+            targetHole.classList.add("empty-hole")
+
+        }
+        // here the hole is empty
+        else
+        {
+            // lose points
+            
+
+        }
+
+    },
+
     timer: function() {
         let gameTime = 60;
 
@@ -22,32 +63,8 @@ const gameArea = {
         // pause
     },
 
-    randomHole: function() {
-        const number = Math.floor(Math.random() * 4)
-        return number
-    },
-
-/*     randomColors: function() {
-        
-        return '#'+Math.floor(Math.random()*16777215).toString(16);
-        
-    }, */
-
-    colorHoles: function() {
-        
-        const emptyHoles = document.getElementsByClassName('empty-hole');
-
-        emptyHoles[this.randomHole()].style.backgroundColor = 'black';
-
-        // setInterval(colorHoles, 1000)
-
-    }
 
     
-
-    // catsOut: function() {},
-
-    // dogsOut
 
     /* update: function() {
 
@@ -60,21 +77,8 @@ const gameArea = {
 }
 
 
-document.getElementById('name-button').addEventListener('click', (event) => {
-    gameArea.startStage()
-})
-
-
-
-//gameArea.start()
-
 
 // stage 1(time 60s) > paused > restart > 0 > stage 2 > ... > stage 3 > ... > 0 > Result 
-
-
-
-
-
 
 
 

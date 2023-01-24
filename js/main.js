@@ -17,6 +17,12 @@ function startGame() {
     nameP.style.display = 'none';
     gameP.style.display = 'flex';
     pauseB.style.display = 'flex';
+
+    gameArea.start()
+
+    setInterval(() => {
+        gameArea.popCat()
+    }, 3000)
     
 }
 
@@ -73,17 +79,17 @@ document.addEventListener('keydown', ({ key }) => {
 
     switch (key) {
         case "Up": case "ArrowUp":
-            
+            gameArea.patCat("top")
             break;
         case "Left": case "ArrowLeft":
-            
+            gameArea.patCat("left")
             break;
         case "Right": case "ArrowRight":
-            
+            gameArea.patCat("right")
             break;
 
         case "Down": case "ArrowDown":
-            
+            gameArea.patCat("bottom")
             break;
     
         default:

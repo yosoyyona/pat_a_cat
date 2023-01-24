@@ -75,16 +75,22 @@ h1{
     justify-content: space-between
 }
 
-.empty-hole{
+#top, #left, #right, #bottom{
     display: inline-block;
     height: 70px;
     width: 70px;
-    /* position: absolute; */
     border: solid 2px black;
     margin: 1px 40px;
-    background-color: aliceblue;
 }
 
+.empty-hole{
+    background-color: black;
+}
+
+.filled-hole{
+    background-image: url('./img/cat.png.png');
+    background-size: cover;
+}
 
 #start-button,
 #again-button{
