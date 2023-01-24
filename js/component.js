@@ -20,9 +20,13 @@ class Componenet {
     }
 }
 
-class Holes extends Componenet {
-    constructor() {
-        super()
+class Cats extends Componenet {
+    constructor(x, y, w, h, color) {
+        super(x, y, w, h, color)
+
+        this.img = new Image()
+        this.img.src = "../img/cat.png" //cat2
+        // www.pngwing.com
     }
 
     /*
@@ -32,12 +36,3 @@ ctx.strokeRect(125, 15, 50, 50) //centerBottom
 ctx.strokeRect(210, 50, 50, 50) //right
     */
 }
-
-
-class Cats extends Componenet {
-    constructor() {
-        super()
-    }
-
-}
-

@@ -30,6 +30,7 @@ const gameArea = {
             if(gameTime > 0) gameTime--;
         }
 
+        // pause
     },
 
     randomHoles: function(holes) {
@@ -41,8 +42,10 @@ const gameArea = {
     },
 
     catsOut: function() {
-        let holesArray = ['left', 'centerTop', 'centerBottom', 'right']
-        this.randomHoles(holesArray)
+        /* let holesArray = ['left', 'centerTop', 'centerBottom', 'right']
+        this.randomHoles(holesArray) */
+
+        
 
 
     },
@@ -68,6 +71,11 @@ gameArea.start
 // cats, randomtime
 function catsOut() {
 
+    /* ctx.strokeRect(40, 50, 50, 50) //left
+    ctx.strokeRect(125, 85, 50, 50) //centerTop
+    ctx.strokeRect(125, 15, 50, 50) //centerBottom
+    ctx.strokeRect(210, 50, 50, 50) //right */
+
 }
 
 
@@ -81,12 +89,6 @@ function dogsOut() {
 
 
 /* document.getElementById("start").addEventListener('click', (event) => {
-
-    // Create the Background
-    background = new Component(0, 0, myGameArea.canvas.width, myGameArea.canvas.height, "grey")
-    //background.img = new Image();
-    //background.img.src = "../img/Background.png"
-
 
 
     updateTimer = setInterval(myGameArea.update, 1000 / 60)
