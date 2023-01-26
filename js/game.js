@@ -44,29 +44,35 @@ const gameArea = {
         let score = document.getElementById('score')
         let totalScore = document.getElementById('total-score')
         
-        // here there's a cat
-        if (targetHole.classList.contains("filled-hole"))
+        // when the game is paused or finished, can't change the score.(doesn't work)
+        if (!this.isGamePaused || !this.isGameFinished) 
         {
+            // here there's a cat
+            if (targetHole.classList.contains("filled-hole"))
+            {
 
-            // add points 
-            targetHole.classList.remove("filled-hole")
-            targetHole.classList.add("empty-hole")
+                // add points 
+                targetHole.classList.remove("filled-hole")
+                targetHole.classList.add("empty-hole")
+                
+                this.scoreArray.push(1)
+            }
+            // here the hole is empty
+            else
+            {
+                // lose points
+                this.scoreArray.push(-1)
+            }
             
-            this.scoreArray.push(1)
-        }
-        // here the hole is empty
-        else
-        {
-            // lose points
-            this.scoreArray.push(-1)
+            const total = this.scoreArray.reduce((sum, number) => {
+                return sum + number;
+            }, 0)
+
+            score.innerText = total;
+            totalScore.innerText = total;
+
         }
         
-        const total = this.scoreArray.reduce((sum, number) => {
-            return sum + number;
-        }, 0)
-
-        score.innerText = total;
-        totalScore.innerText = total;
     },
 
     timer: function() {
