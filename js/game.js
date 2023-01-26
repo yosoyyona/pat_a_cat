@@ -1,6 +1,7 @@
 const gameArea = {
     isGamePaused: false,
     isGameFinished: false,
+    scoreArray: [],
     
     cats: [
         { isCatOut: false, dom: document.getElementById("top") },
@@ -41,7 +42,6 @@ const gameArea = {
 
         let targetHole = document.getElementById(position)
         let totalScore = document.getElementById('total-score')
-        let scoreArray = [];
         
         // here there's a cat
         if (targetHole.classList.contains("filled-hole"))
@@ -51,16 +51,16 @@ const gameArea = {
             targetHole.classList.remove("filled-hole")
             targetHole.classList.add("empty-hole")
             
-            scoreArray.push(1)
+            this.scoreArray.push(1)
         }
         // here the hole is empty
         else
         {
             // lose points
-            scoreArray.push(-1)
+            this.scoreArray.push(-1)
         }
         
-        const total = scoreArray.reduce((sum, number) => {
+        const total = this.scoreArray.reduce((sum, number) => {
             return sum + number;
         }, 0)
 

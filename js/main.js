@@ -81,6 +81,13 @@ document.getElementById("restart-button").addEventListener('click', (event) => {
 
 document.getElementById('again-button').addEventListener('click', (event) => {
     
+    
+    /*
+    document.querySelectorAll('#top #left #right #bottom').style.backgroundImage = '' 
+    document.querySelectorAll('#top #left #right #bottom').classList.remove('filled-hole')
+    document.querySelectorAll('#top #left #right #bottom').classList.add('empty-hole') 
+    */
+
     startGame();
     
 })
