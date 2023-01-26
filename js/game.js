@@ -49,7 +49,7 @@ const gameArea = {
         if (targetHole.classList.contains("filled-hole"))
         {
 
-            // add points
+            // add points > array로 접근하기?
             targetHole.classList.remove("filled-hole")
             targetHole.classList.add("empty-hole")
             
@@ -70,7 +70,15 @@ const gameArea = {
         let time = 30;
 
         let gameTimer = setInterval(function(){
-            if(time <= 0) clearInterval(gameTimer)
+            if(time <= 0) 
+            {
+                clearInterval(gameTimer)
+                this.isGameFinished = true;
+                document.getElementById('total-score').innerText = document.getElementById('score').innerText
+                gameP.style.display = "none"
+                resultP.style.display = "flex"
+            }
+
             document.getElementById('time').innerText = time
             time -= 1;
 
@@ -79,7 +87,12 @@ const gameArea = {
         // pause
     },
 
-
+/*     finish: function() {
+        this.isGameFinished = true;
+        document.getElementById('total-score').innerText = document.getElementById('score').innerText
+        gameP.style.display = "none"
+        resultP.style.display = "flex"
+    }, */
     
 
     /* update: function() {

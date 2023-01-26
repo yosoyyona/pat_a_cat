@@ -26,6 +26,10 @@ function startGame() {
 
     gameArea.timer()
     
+    /* if(document.getElementById('time').innerText === 0)
+    {
+        gameArea.finish()
+    } */
 }
 
 let pauseGame = () => {
@@ -33,7 +37,7 @@ let pauseGame = () => {
     gameP.style.display = "none"
     pausedP.style.display = "flex"
 
-    gameArea.timer.pause()
+    // gameArea.timer.pause()
 }
 
 let restartGame = () => {
