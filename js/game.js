@@ -1,7 +1,7 @@
 const gameArea = {
     isGamePaused: false,
     isGameFinished: false,
-    scoreArray: [],
+    scoreArray: [0],
     
     cats: [
         { isCatOut: false, dom: document.getElementById("top") },
@@ -16,7 +16,7 @@ const gameArea = {
         this.cats.forEach(cat => {
             cat.dom.classList.add("empty-hole")
         })
-
+        this.scoreArray = [0]
     },
 
     popCat: function () {
@@ -41,6 +41,7 @@ const gameArea = {
     patCat: function(position) {
 
         let targetHole = document.getElementById(position)
+        let score = document.getElementById('score')
         let totalScore = document.getElementById('total-score')
         
         // here there's a cat
@@ -64,6 +65,7 @@ const gameArea = {
             return sum + number;
         }, 0)
 
+        score.innerText = total;
         totalScore.innerText = total;
     },
 

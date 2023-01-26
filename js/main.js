@@ -37,6 +37,8 @@ let pauseGame = () => {
     gameArea.isGamePaused = true
     gameP.style.display = "none"
     pausedP.style.display = "flex"
+    resultP.style.display = 'none';
+
 
     // gameArea.timer.pause()
 }
@@ -96,7 +98,8 @@ document.getElementById('again-button').addEventListener('click', (event) => {
 // keyboard events
 document.addEventListener('keydown', ({ key }) => {
 
-    //if (gameArea.isGamePaused) return
+    if (gameArea.isGamePaused) return
+    if (gameArea.isGameFinished) return
 
     switch (key) {
         case "Up": case "ArrowUp":

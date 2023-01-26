@@ -55,7 +55,7 @@ h1{
 
 
 #name-board,
-#stage-board,
+#score-board,
 #time-board{
     display: inline-flex;
     flex-flow: row nowrap;
@@ -109,7 +109,7 @@ h1{
     margin: auto;
 }
 
-#score-board{
+#result-board{
     margin-bottom: 20px;
 }
 
