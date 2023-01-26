@@ -76,20 +76,21 @@ h1{
 
 #top, #left, #right, #bottom{
     display: inline-block;
-    height: 70px;
-    width: 70px;
-    border: solid 2px black;
+    height: 80px;
+    width: 80px;
+    /*border: solid 2px black;*/
     margin: 1px 40px;
 }
 
 .hole{
-    background-color: black;
     /* box image*/
+    background-image: url('img/paperbox-img_resize.png');
+    background-size: cover;
 }
 
 .filled-hole{
     background-color: transparent;
-    background-image: url('./img/cat.png.png');
+    background-image: url('img/cat.png.png');
     /* Lilu image*/
     background-size: cover;
 }

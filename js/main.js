@@ -130,3 +130,14 @@ document.addEventListener('keydown', ({ key }) => {
             return; 
     }
 })
+
+
+/* document.getElementById("start").addEventListener('click', (event) => {
+
+
+    updateTimer = setInterval(myGameArea.update, 1000 / 60)
+
+    document.getElementById("start-page").style.display = "none"
+    //document.getElementById("restart").disabled = false
+    //document.getElementById("pause").disabled = false
+}) */

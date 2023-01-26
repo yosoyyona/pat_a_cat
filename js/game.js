@@ -51,7 +51,6 @@ const gameArea = {
             if (targetHole.classList.contains("filled-hole"))
             {
 
-                // add points 
                 targetHole.classList.remove("filled-hole")
                 targetHole.classList.add("empty-hole")
                 
@@ -60,7 +59,6 @@ const gameArea = {
             // here the hole is empty
             else
             {
-                // lose points
                 this.scoreArray.push(-1)
             }
             
@@ -94,16 +92,6 @@ const gameArea = {
 
     },
 
-    pause: function() {
-        if(!this.isGamePaused)
-        {
-            
-        }
-        else if(this.isGamePaused)
-        {
-
-        }
-    }
 
     /* update: function() {
 
@@ -120,13 +108,3 @@ const gameArea = {
 // stage 1(time 60s) > paused > restart > 0 > stage 2 > ... > stage 3 > ... > 0 > Result 
 
 
-
-/* document.getElementById("start").addEventListener('click', (event) => {
-
-
-    updateTimer = setInterval(myGameArea.update, 1000 / 60)
-
-    document.getElementById("start-page").style.display = "none"
-    //document.getElementById("restart").disabled = false
-    //document.getElementById("pause").disabled = false
-}) */
