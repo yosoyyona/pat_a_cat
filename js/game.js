@@ -22,7 +22,7 @@ const gameArea = {
     popCat: function () {
 
         // get all the black holes
-        let blackHoles = document.getElementsByClassName("empty-hole")
+        let blackHoles = document.getElementsByClassName("hole")
 
         // get all the black holes that there are (because there might only be 1 or two available if all the cats get out)
         // and get a random of them
@@ -86,10 +86,18 @@ const gameArea = {
 
         }, 1000)
 
-        // pause
     },
 
-    
+    pause: function() {
+        if(!this.isGamePaused)
+        {
+            
+        }
+        else if(this.isGamePaused)
+        {
+
+        }
+    }
 
     /* update: function() {
 

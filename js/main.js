@@ -11,6 +11,7 @@ function createUser() {
 }
 
 
+
 function startGame() {
 
     startP.style.display = 'none';
@@ -21,26 +22,35 @@ function startGame() {
 
     gameArea.start()
 
-    setInterval(() => {
-        gameArea.popCat()
-    }, 3000)
-
     gameArea.timer()
     
-    /* if(document.getElementById('time').innerText === 0)
+
+    // pause - doesn't work
+    if(!gameArea.isGamePaused) 
     {
-        gameArea.finish()
-    } */
+                toggle = setInterval(function() {
+            gameArea.popCat()
+        }, 3000)
+    
+    }
+    else if(gameArea.isGamePaused)
+    {
+        pauseGame()
+
+        clearInterval(toggle)
+        clearTimeout(gameArea.timer())
+    }
+    
+
 }
+
 
 let pauseGame = () => {
     gameArea.isGamePaused = true
     gameP.style.display = "none"
     pausedP.style.display = "flex"
-    resultP.style.display = 'none';
-
-
-    // gameArea.timer.pause()
+    resultP.style.display = "none"
+    
 }
 
 let restartGame = () => {

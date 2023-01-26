@@ -82,12 +82,13 @@ h1{
     margin: 1px 40px;
 }
 
-.empty-hole{
+.hole{
     background-color: black;
     /* box image*/
 }
 
 .filled-hole{
+    background-color: transparent;
     background-image: url('./img/cat.png.png');
     /* Lilu image*/
     background-size: cover;
