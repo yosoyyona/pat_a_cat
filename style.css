@@ -4,6 +4,10 @@ body{
     flex-direction: column;
 }
 
+#game-page{
+    justify-content: space-evenly;
+}
+
 #start-page,
 #name-page,
 #game-page,
@@ -38,25 +42,22 @@ h1{
     display: none;
 }
 
-#game-page{
-    justify-content: space-evenly;
-}
 
 /* top */
 #info-board{   
-    position: absolute;
+    
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
     margin: auto;
-
 }
 
 
 #name-board,
 #score-board,
 #time-board{
+    
     display: inline-flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
@@ -76,8 +77,8 @@ h1{
 
 #top, #left, #right, #bottom{
     display: inline-block;
-    height: 80px;
-    width: 80px;
+    height: 83px;
+    width: 90px;
     /*border: solid 2px black;*/
     margin: 1px 40px;
 }
@@ -90,8 +91,7 @@ h1{
 
 .filled-hole{
     background-color: transparent;
-    background-image: url('img/cat.png.png');
-    /* Lilu image*/
+    background-image: url('img/lilu.png');
     background-size: cover;
 }
 
@@ -99,20 +99,25 @@ h1{
 #again-button{
     width: 100px;
     height: 60px;
+    font-size: 17px;
 }
 
 #pause-button,
-#restar-button{
+#restart-button{
     position: absolute;
     justify-content: center;
+    align-items: center;
     bottom: 30px;
     transform: translateX(-50%);
     display: none;
     margin: auto;
+    width: 70px;
+    height: 40px;
+    font-size: 17px;
 }
 
 #result-board{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 #total-score{

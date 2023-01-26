@@ -55,6 +55,7 @@ const gameArea = {
                 targetHole.classList.add("empty-hole")
                 
                 this.scoreArray.push(1)
+                matchSound.play()
             }
             // here the hole is empty
             else
@@ -82,6 +83,7 @@ const gameArea = {
                 clearInterval(gameTimer)
                 this.isGameFinished = true;
                 gameP.style.display = "none"
+                restartB.style.display = "none"
                 resultP.style.display = "flex"
             }
 

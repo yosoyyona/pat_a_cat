@@ -49,6 +49,7 @@ let pauseGame = () => {
     gameArea.isGamePaused = true
     gameP.style.display = "none"
     pausedP.style.display = "flex"
+    restartB.style.display = "flex"
     resultP.style.display = "none"
     
 }
@@ -59,13 +60,19 @@ let restartGame = () => {
     gameP.style.display = "flex"
 }
 
+let startSound = document.createElement('audio')
+startSound.src = "sound/lilu_miau.mp3"
 
+let matchSound = document.createElement('audio')
+matchSound.src = "sound/lilu_prr.mp3"
 
 // click events
 document.getElementById('start-button').onclick = () => {
     startP.style.display = 'none';
     nameP.style.display = 'flex';
+    startSound.play()
 }
+
 
 document.getElementById('name-button').onclick = () => {
     
