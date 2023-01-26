@@ -47,7 +47,7 @@ h1{
     position: absolute;
     display: inline-flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: center;
     margin: auto;
 
@@ -55,7 +55,6 @@ h1{
 
 
 #name-board,
-#score-board,
 #stage-board,
 #time-board{
     display: inline-flex;
@@ -85,10 +84,12 @@ h1{
 
 .empty-hole{
     background-color: black;
+    /* box image*/
 }
 
 .filled-hole{
     background-image: url('./img/cat.png.png');
+    /* Lilu image*/
     background-size: cover;
 }
 
@@ -106,4 +107,13 @@ h1{
     transform: translateX(-50%);
     display: none;
     margin: auto;
+}
+
+#score-board{
+    margin-bottom: 20px;
+}
+
+#total-score{
+    font-size: 30px;
+    color: #ff6060;
 }

@@ -17,6 +17,7 @@ function startGame() {
     nameP.style.display = 'none';
     gameP.style.display = 'flex';
     pauseB.style.display = 'flex';
+    resultP.style.display = 'none';
 
     gameArea.start()
 
@@ -78,6 +79,11 @@ document.getElementById("restart-button").addEventListener('click', (event) => {
 
 })
 
+document.getElementById('again-button').addEventListener('click', (event) => {
+    
+    startGame();
+    
+})
 
 
 // keyboard events

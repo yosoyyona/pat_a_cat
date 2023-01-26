@@ -40,30 +40,31 @@ const gameArea = {
     patCat: function(position) {
 
         let targetHole = document.getElementById(position)
-        let score = document.getElementById('score')
-        let totalScore = 0;
-        let counterPlus = 0;
-        let counterMinus = 0;
-
+        let totalScore = document.getElementById('total-score')
+        let scoreArray = [];
+        
         // here there's a cat
         if (targetHole.classList.contains("filled-hole"))
         {
 
-            // add points > array로 접근하기?
+            // add points 
             targetHole.classList.remove("filled-hole")
             targetHole.classList.add("empty-hole")
             
-            counterPlus ++;
+            scoreArray.push(1)
         }
         // here the hole is empty
         else
         {
             // lose points
-            counterMinus ++;
-
+            scoreArray.push(-1)
         }
-        totalScore = counterPlus - counterMinus;
-        score.innerText = totalScore;
+        
+        const total = scoreArray.reduce((sum, number) => {
+            return sum + number;
+        }, 0)
+
+        totalScore.innerText = total;
     },
 
     timer: function() {
@@ -74,7 +75,6 @@ const gameArea = {
             {
                 clearInterval(gameTimer)
                 this.isGameFinished = true;
-                document.getElementById('total-score').innerText = document.getElementById('score').innerText
                 gameP.style.display = "none"
                 resultP.style.display = "flex"
             }
@@ -87,12 +87,6 @@ const gameArea = {
         // pause
     },
 
-/*     finish: function() {
-        this.isGameFinished = true;
-        document.getElementById('total-score').innerText = document.getElementById('score').innerText
-        gameP.style.display = "none"
-        resultP.style.display = "flex"
-    }, */
     
 
     /* update: function() {
