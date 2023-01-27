@@ -78,7 +78,7 @@ document.getElementById('name-button').onclick = () => {
     
     createUser();
 
-    if(!userName == '' && typeof userName === 'string') 
+    if(!userName == '' && typeof userName === 'string' && userName.length < 20) 
     {
         gameP.style.display = 'flex';
         startGame();
