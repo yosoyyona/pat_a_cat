@@ -1,12 +1,11 @@
 # Pat a Cat | First project
-Pat a Cat is a game to give cats love by petting. You can use keyboard arrows instead of hands🙌 and can get score too!
+Pat a Cat is a game to give cats love by petting. Use keyboard arrows instead of hands🙌 and can get score too!
 
 ![](img/lilu_keyboard.jpg)
-**My Flatmate's cat, Lilu**
+**My Flatmate's Cat, Lilu**
 
 ## Instruction
-This game is a kind of whack a mole. When the cat(Lilu) comes out of the box, type the keys in the right direction, so you can pat Lilu and get 1 point.
-If you tab keys when she is in the box, you gonna lose 1 point, so watch out! 
+This game is a kind of whack a mole. When the cat(Lilu) comes out of the box, type the keyboard buttons in the right direction(←↑↓→), so you can pat Lilu and get 1 point at a time. If you tab keys when she is in the box, you gonna lose 1 point, so watch out! 
 
 ## Files
 | Name | Description |
@@ -22,10 +21,10 @@ If you tab keys when she is in the box, you gonna lose 1 point, so watch out!
 | style.css      | stylesheet |
 
 ## Tasks to do after presentation
-- [ ] Done!
-- [ ] Also Done!
-- [ ] Not quite done yet
-- [ ] Also not done yet
+- [ ] to make difficult when the game is restarted
+- [ ] to keep just 1-2 seconds the images on
+- [ ] to pause the timer and coming out the cat when the game is paused
+- [ ] to stop the keyboard-score when the game is not ongoing
 
 ## Links
 - [Deployed Game](link)
