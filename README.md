@@ -27,5 +27,5 @@ This game is a kind of whack a mole. When the cat(Lilu) comes out of the box, ty
 - [ ] to stop the keyboard-score when the game is not ongoing
 
 ## Links
-- [Deployed Game](link)
-- [Presentation Slides](link)
+- [Deployed Game](https://yosoyyona.github.io/pat_a_cat/)
+- [Presentation Slides](https://docs.google.com/presentation/d/11FaS86A6iCgs9jZI_GNXbjHZPMyMuJjtpl0Ynpu2I5M/edit?usp=sharing)
