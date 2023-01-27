@@ -2,7 +2,7 @@
 Pat a Cat is a game to give cats love by petting. Use keyboard arrows instead of hands🙌 and can get score too!
 
 ![](img/lilu_keyboard.jpg)
-**My Flatmate's Cat, Lilu**
+**My Platmate's Cat, Lilu**
 
 ## Instruction
 This game is a kind of whack a mole. When the cat(Lilu) comes out of the box, type the keyboard buttons in the right direction(←↑↓→), so you can pat Lilu and get 1 point at a time. If you tab keys when she is in the box, you gonna lose 1 point, so watch out! 
