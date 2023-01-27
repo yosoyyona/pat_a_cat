@@ -4,8 +4,11 @@ body{
     flex-direction: column;
 }
 
-#game-page{
-    justify-content: space-evenly;
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
 }
 
 #start-page,
@@ -13,16 +16,40 @@ body{
 #game-page,
 #paused-page,
 #result-page{
-    position: absolute;
     display: flex;
+    position: absolute;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    justify-content: center;
     width: 500px;
     height: 500px;
 }
 
+#start-page{
+    justify-content: space-around;
+    background-image: url('img/start_bg.jpg');
+    background-size: cover;
+}
+
+#paused-page{
+    justify-content: space-evenly;
+    background-image: url('img/paused_bg.jpg');
+    background-size: cover;
+}
+
+#result-page{
+    justify-content: space-evenly;
+    background-image: url('img/result_bg.jpg');
+    background-size: cover;
+}
+
+#name-page{
+    justify-content: center;
+}
+
+#game-page{
+    justify-content: space-evenly;
+}
 
 #start-page,
 #name-page,
@@ -32,7 +59,9 @@ body{
 }
 
 h1{
-    font-size: 50px;
+    font-size: 60px;
+    font-family: 'PyeongChangPeace-Bold';
+    color: white;
 }
 
 #name-page,
@@ -42,10 +71,20 @@ h1{
     display: none;
 }
 
+#name-page p{
+    font-size: 25px;
+    font-family: 'PyeongChangPeace-Bold';
+}
+
+#name-page input{
+    width: 200px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
 
 /* top */
 #info-board{   
-    
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
@@ -57,7 +96,7 @@ h1{
 #name-board,
 #score-board,
 #time-board{
-    
+    font-family: 'PyeongChangPeace-Bold';
     display: inline-flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
@@ -96,24 +135,36 @@ h1{
 }
 
 #start-button,
-#again-button{
+#again-button,
+#name-button{
     width: 100px;
-    height: 60px;
+    height: 50px;
     font-size: 17px;
+    background-color: transparent;
+    font-family: 'PyeongChangPeace-Bold';
+    border-radius: 12px;
+}
+
+#start-button{
+    font-size: 22px;
 }
 
 #pause-button,
 #restart-button{
-    position: absolute;
     justify-content: center;
     align-items: center;
-    bottom: 30px;
-    transform: translateX(-50%);
     display: none;
     margin: auto;
-    width: 70px;
+    width: 80px;
     height: 40px;
-    font-size: 17px;
+    font-size: 15px;
+    background-color: transparent;
+    font-family: 'PyeongChangPeace-Bold';
+    border-radius: 12px;
+}
+
+#pause-button{
+    background-color: #ecc47a;
 }
 
 #result-board{
@@ -121,6 +172,7 @@ h1{
 }
 
 #total-score{
-    font-size: 30px;
-    color: #ff6060;
+    font-size: 40px;
+    color: #ecc47a;
+    font-family: 'PyeongChangPeace-Bold';
 }
